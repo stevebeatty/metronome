@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Metronome</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter BPM</string>
+    <string name="button_send">Send</string>
+    <string name="button_start">Start</string>
+    <string name="button_stop">Stop</string>
+    <string name="seekbar_label">BPM</string>
+    <string name="quarter_note">♩</string>
+    <string name="eigth_note">♪</string>
+    <string name="sixteenth_note">&#x1d161;</string>
+    <string name="spark">▲</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="signature_text">Time</string>
+    <string name="subdivision_text">Subdivisions</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:keepScreenOn="true"
+    tools:showIn="@layout/activity_metronome">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/seekLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/seekBPM"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="@string/seekbar_label" />
+
+        <SeekBar
+            android:id="@+id/seek1"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="90"
+            android:max="300"
+            android:progress="20" />
+
+        <TextView
+            android:id="@+id/seekDisplay"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signatureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekLayout"
+        android:text="@string/signature_text"
+        />
+
+    <Spinner
+        android:id="@+id/timeSignatures"
+        android:prompt="@string/signature_text"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_toRightOf="@id/signatureText"
+        android:layout_alignBaseline="@id/signatureText"
+        />
+
+    <TextView
+        android:id="@+id/subdivisionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekLayout"
+        android:text="@string/subdivision_text"
+        android:layout_toLeftOf="@+id/subdivisionSpinner"
+        />
+
+    <Spinner
+        android:id="@id/subdivisionSpinner"
+        android:prompt="@string/subdivision_text"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_alignBaseline="@id/signatureText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <Button
+        android:id="@+id/toggle_button"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeSignatures"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_start"
+        android:onClick="toggleActive"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/spark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spark"
+        android:visibility="invisible"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/colorSpark"
+        />
+
+
+</RelativeLayout>
